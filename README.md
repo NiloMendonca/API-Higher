@@ -358,14 +358,14 @@ Return:
 Header:
 ```
 {
-    token: 'secret_token'
+	token: 'secret_token'
 }
 ```
 Body:
 ```
 {
-	  "email": "login",
-	  "password": "pass"
+	"email": "login",
+	"password": "pass"
 }
 ```
 Return:
@@ -374,7 +374,8 @@ Return:
 	"user": {
 		"email": "email@teste.com",
 		"name": "NomeDoUsuario",
-		"doc": "00000000000"
+		"doc": "00000000000",
+		"fantasyName": "NomeFantasia"
 	},
 	"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InNzb3JwcmVzb0BnbWFpbC5jb20iLCJpYXQiOjE2OTM4NTY3MzAsImV4cCI6MTY5Mzg1NzMzMH0.nFL5rQPmmCv-mbBWNvITLQoB9mDtNBmjpMjX0s4oGQ4"
 }
@@ -383,14 +384,123 @@ Return:
 Header:
 ```
 {
-    token: 'secret_token'
+	token: 'secret_token'
 }
 ```
 Body:
 ```
 {
-	  "email": "login",
-	  "password": "pass"
+	"user": {
+		"addresses": [
+	         {
+	           "streetName": "String",
+	           "streetNumber": "String",
+	           "neighborhood": "String",
+	           "zipCode": "String",
+	           "city": "String",
+	           "state": "String",
+	           "additionalInfo": "String"
+	         }
+	       ],
+	       "type": "String",
+	       "nationality": "String",
+	       "isAmericanTaxResident": "Boolean",
+	       "members": [
+			{
+		         "addresses": [
+		           {
+		             	"streetName": "String",
+			        "streetNumber": "String",
+			        "neighborhood": "String",
+			        "zipCode": "String",
+			        "city": "String",
+			        "state": "String",
+		           }
+		         ],
+		         "nationality": "String",
+		         "monthlyIncome": "Number",
+		         "netWorth": "Number",
+		         "isPoliticallyExposed": "Boolean",
+		         "isPublicAgent": "Boolean",
+		         "isAmericanTaxResident": "Boolean",
+		         "name": "String",
+		         "phone": "String",
+		         "email": "String",
+		         "taxId": "String",
+		         "birthday": "String",
+		         "birthPlace": "String",
+		         "profession": "String",
+		         "maritalStatus": "String",
+		         "document": {
+		           "number": "String",
+		           "type": "String",
+		           "issuanceDate": "String",
+		           "issuer": "String",
+		           "issuancePlace": "String",
+		         }
+		       }
+		],
+	       "companyType": "String",
+	       "name": "String",
+	       "phone": "String",
+	       "email": "String",
+	       "taxId": "String",
+	       "cnae": "String",
+	       "incorporationDate": "Date",
+	       "shareCapital": "Number",
+	       "averageMonthlyRevenue": "Number",
+	       "netWorth": "String"
+	},
+
+	"mng": {
+	        name: "String",
+	        cell_phone: "String",
+	        email: "String",
+	        cnpj: "String",
+	        ddi: "String",
+	        fantasy_name: "String",
+	        social_reason: "String",
+	        cnae: "String",
+	        branch_of_activity: "String",
+	        legal_nature: "String",
+	        commercial_phone: "String",
+	        site: "String",
+	        commecial_representative: "String",
+	        partners: "Array",
+	        address: "String",
+	        zipcode: "String",
+	        street: "String",
+	        nameAddress: "String",
+	        number: "String",
+	        complement: "String",
+	        district: "String",
+	        state: "String",
+	        city: "String",
+	
+	        foreign_trade: "Boolean",
+	        brazilian_capitals: "Boolean",
+	        foreign_capitals: "Boolean",
+	        miscellaneous_services: "Boolean",
+	        safe: "Boolean",
+	        transport: "Boolean",
+	        payment_intermediation: "Boolean",
+	        travel_tourism_agencies: "Boolean",
+	
+	        creation_date: "Date",
+	        share_capital: "Number",
+	        monthly_income: "Number",
+	        net_worth: "String",
+	        patrimony: "Number",
+	
+	        main_products: "String",
+	        main_customers: "String",
+	        exchange_financial_institutions: "String",
+	        how_did_you_meet: "String",
+	        others: "String",
+	        relationship_time: "String",
+	
+	        password: "String"
+	}
 }
 ```
 Return:
@@ -399,7 +509,8 @@ Return:
 	"user": {
 		"email": "email@teste.com",
 		"name": "NomeDoUsuario",
-		"doc": "00000000000"
+		"doc": "00000000000",
+		"fantasyName": "NomeFantasia"
 	},
 	"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InNzb3JwcmVzb0BnbWFpbC5jb20iLCJpYXQiOjE2OTM4NTY3MzAsImV4cCI6MTY5Mzg1NzMzMH0.nFL5rQPmmCv-mbBWNvITLQoB9mDtNBmjpMjX0s4oGQ4"
 }
@@ -408,125 +519,171 @@ Return:
 Header:
 ```
 {
-    token: 'secret_token'
+	token: 'secret_token'
 }
 ```
 Body:
 ```
 {
-	  "email": "login",
-	  "password": "pass"
+	"mng": {
+	        name: "String",
+	        cell_phone: "String",
+	        email: "String",
+	        cnpj: "String",
+	        ddi: "String",
+	        fantasy_name: "String",
+	        social_reason: "String",
+	        cnae: "String",
+	        branch_of_activity: "String",
+	        legal_nature: "String",
+	        commercial_phone: "String",
+	        site: "String",
+	        commecial_representative: "String",
+	        partners: "Array",
+	        address: "String",
+	        zipcode: "String",
+	        street: "String",
+	        nameAddress: "String",
+	        number: "String",
+	        complement: "String",
+	        district: "String",
+	        state: "String",
+	        city: "String",
+	
+	        foreign_trade: "Boolean",
+	        brazilian_capitals: "Boolean",
+	        foreign_capitals: "Boolean",
+	        miscellaneous_services: "Boolean",
+	        safe: "Boolean",
+	        transport: "Boolean",
+	        payment_intermediation: "Boolean",
+	        travel_tourism_agencies: "Boolean",
+	
+	        creation_date: "Date",
+	        share_capital: "Number",
+	        monthly_income: "Number",
+	        net_worth: "String",
+	        patrimony: "Number",
+	
+	        main_products: "String",
+	        main_customers: "String",
+	        exchange_financial_institutions: "String",
+	        how_did_you_meet: "String",
+	        others: "String",
+	        relationship_time: "String"
+	}
 }
 ```
 Return:
 ```
 {
-	"user": {
-		"email": "email@teste.com",
-		"name": "NomeDoUsuario",
-		"doc": "00000000000"
-	},
-	"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InNzb3JwcmVzb0BnbWFpbC5jb20iLCJpYXQiOjE2OTM4NTY3MzAsImV4cCI6MTY5Mzg1NzMzMH0.nFL5rQPmmCv-mbBWNvITLQoB9mDtNBmjpMjX0s4oGQ4"
+	"status": 200
 }
 ```
-### (GET) '/pj/register':
+### (POST) '/pj/incompleteRegistration':
 Header:
 ```
 {
-    token: 'secret_token'
+	token: 'secret_token'
 }
 ```
 Body:
 ```
 {
-	  "email": "login",
-	  "password": "pass"
+		name: "String",
+	        cell_phone: "String",
+	        email: "String",
+	        cnpj: "String",
+	        ddi: "String",
+	        fantasy_name: "String",
+	        social_reason: "String",
+	        cnae: "String",
+	        branch_of_activity: "String",
+	        legal_nature: "String",
+	        commercial_phone: "String",
+	        site: "String",
+	        commecial_representative: "String",
+	        partners: "Array",
+	        address: "String",
+	        zipcode: "String",
+	        street: "String",
+	        nameAddress: "String",
+	        number: "String",
+	        complement: "String",
+	        district: "String",
+	        state: "String",
+	        city: "String",
+	
+	        foreign_trade: "Boolean",
+	        brazilian_capitals: "Boolean",
+	        foreign_capitals: "Boolean",
+	        miscellaneous_services: "Boolean",
+	        safe: "Boolean",
+	        transport: "Boolean",
+	        payment_intermediation: "Boolean",
+	        travel_tourism_agencies: "Boolean",
+	
+	        creation_date: "Date",
+	        share_capital: "Number",
+	        monthly_income: "Number",
+	        net_worth: "String",
+	        patrimony: "Number",
+	
+	        main_products: "String",
+	        main_customers: "String",
+	        exchange_financial_institutions: "String",
+	        how_did_you_meet: "String",
+	        others: "String",
+	        relationship_time: "String",
+		"password": "String",
+		"step": "Number",
+		"token": "String"
 }
 ```
 Return:
 ```
 {
-	"user": {
-		"email": "email@teste.com",
-		"name": "NomeDoUsuario",
-		"doc": "00000000000"
-	},
-	"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InNzb3JwcmVzb0BnbWFpbC5jb20iLCJpYXQiOjE2OTM4NTY3MzAsImV4cCI6MTY5Mzg1NzMzMH0.nFL5rQPmmCv-mbBWNvITLQoB9mDtNBmjpMjX0s4oGQ4"
-}
-```
-### (POST) '/pj/completeRegistration':
-Header:
-```
-{
-    token: 'secret_token'
-}
-```
-Body:
-```
-{
-	  "email": "login",
-	  "password": "pass"
-}
-```
-Return:
-```
-{
-	"user": {
-		"email": "email@teste.com",
-		"name": "NomeDoUsuario",
-		"doc": "00000000000"
-	},
-	"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InNzb3JwcmVzb0BnbWFpbC5jb20iLCJpYXQiOjE2OTM4NTY3MzAsImV4cCI6MTY5Mzg1NzMzMH0.nFL5rQPmmCv-mbBWNvITLQoB9mDtNBmjpMjX0s4oGQ4"
+	"token": "String"
 }
 ```
 ### (POST) '/pj/recoveryPassword':
 Header:
 ```
 {
-    token: 'secret_token'
+	token: 'secret_token'
 }
 ```
 Body:
 ```
 {
-	  "email": "login",
-	  "password": "pass"
+	  "email": "login"
 }
 ```
 Return:
 ```
 {
-	"user": {
-		"email": "email@teste.com",
-		"name": "NomeDoUsuario",
-		"doc": "00000000000"
-	},
-	"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InNzb3JwcmVzb0BnbWFpbC5jb20iLCJpYXQiOjE2OTM4NTY3MzAsImV4cCI6MTY5Mzg1NzMzMH0.nFL5rQPmmCv-mbBWNvITLQoB9mDtNBmjpMjX0s4oGQ4"
+	"status": 200
 }
 ```
 ### (POST) '/pj/updatePassword':
 Header:
 ```
 {
-    token: 'secret_token'
+	token: 'secret_token'
 }
 ```
 Body:
 ```
 {
-	  "email": "login",
-	  "password": "pass"
+	"email": "login",
+	"password": "pass",
+	"token": "token"
 }
 ```
 Return:
 ```
 {
-	"user": {
-		"email": "email@teste.com",
-		"name": "NomeDoUsuario",
-		"doc": "00000000000"
-	},
-	"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InNzb3JwcmVzb0BnbWFpbC5jb20iLCJpYXQiOjE2OTM4NTY3MzAsImV4cCI6MTY5Mzg1NzMzMH0.nFL5rQPmmCv-mbBWNvITLQoB9mDtNBmjpMjX0s4oGQ4"
+	"message": "Senha atualizada"
 }
 ```
 ### (POST) '/pj/businessDataByRecoveryToken':
@@ -539,43 +696,63 @@ Header:
 Body:
 ```
 {
-	  "email": "login",
-	  "password": "pass"
+	"token": "token"
 }
 ```
 Return:
 ```
 {
-	"user": {
-		"email": "email@teste.com",
-		"name": "NomeDoUsuario",
-		"doc": "00000000000"
+	"data": {
+		"token": "String",
+		"email": "String",
+		"active": "Boolean"
 	},
-	"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InNzb3JwcmVzb0BnbWFpbC5jb20iLCJpYXQiOjE2OTM4NTY3MzAsImV4cCI6MTY5Mzg1NzMzMH0.nFL5rQPmmCv-mbBWNvITLQoB9mDtNBmjpMjX0s4oGQ4"
-}
-```
-### (POST) '/pj/verifyDataByDoc':
-Header:
-```
-{
-    token: 'secret_token'
-}
-```
-Body:
-```
-{
-	  "email": "login",
-	  "password": "pass"
-}
-```
-Return:
-```
-{
 	"user": {
-		"email": "email@teste.com",
-		"name": "NomeDoUsuario",
-		"doc": "00000000000"
-	},
-	"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InNzb3JwcmVzb0BnbWFpbC5jb20iLCJpYXQiOjE2OTM4NTY3MzAsImV4cCI6MTY5Mzg1NzMzMH0.nFL5rQPmmCv-mbBWNvITLQoB9mDtNBmjpMjX0s4oGQ4"
+		name: "String",
+		cell_phone: "String",
+	        email: "String",
+	        cnpj: "String",
+	        ddi: "String",
+	        fantasy_name: "String",
+	        social_reason: "String",
+	        cnae: "String",
+	        branch_of_activity: "String",
+	        legal_nature: "String",
+	        commercial_phone: "String",
+	        site: "String",
+	        commecial_representative: "String",
+	        partners: "Array",
+	        address: "String",
+	        zipcode: "String",
+	        street: "String",
+	        nameAddress: "String",
+	        number: "String",
+	        complement: "String",
+	        district: "String",
+	        state: "String",
+	        city: "String",
+	
+	        foreign_trade: "Boolean",
+	        brazilian_capitals: "Boolean",
+	        foreign_capitals: "Boolean",
+	        miscellaneous_services: "Boolean",
+	        safe: "Boolean",
+	        transport: "Boolean",
+	        payment_intermediation: "Boolean",
+	        travel_tourism_agencies: "Boolean",
+	
+	        creation_date: "Date",
+	        share_capital: "Number",
+	        monthly_income: "Number",
+	        net_worth: "String",
+	        patrimony: "Number",
+	
+	        main_products: "String",
+	        main_customers: "String",
+	        exchange_financial_institutions: "String",
+	        how_did_you_meet: "String",
+	        others: "String",
+	        relationship_time: "String"
+	}
 }
 ```
